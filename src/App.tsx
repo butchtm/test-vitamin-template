@@ -1,20 +1,14 @@
-import LoadingOrError from 'components/LoadingOrError'
 import type { ReactElement } from 'react'
-import { lazy, Suspense } from 'react'
+import { lazy } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-const Gallery = lazy(async () => import('pages/Gallery'))
-const Details = lazy(async () => import('pages/Details'))
-
+const HelloWorld = lazy(async () => import('pages/HelloWorld'))
 export default function App(): ReactElement {
 	return (
 		<BrowserRouter>
-			<Suspense fallback={<LoadingOrError />}>
-				<Routes>
-					<Route path='/' element={<Gallery />} />
-					<Route path=':fruitName' element={<Details />} />
-				</Routes>
-			</Suspense>
+			<Routes>
+				<Route path='/' element={<HelloWorld />} />
+			</Routes>
 		</BrowserRouter>
 	)
 }
