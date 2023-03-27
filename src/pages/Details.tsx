@@ -86,6 +86,14 @@ export default function DetailsPage(): ReactElement {
 					</table>
 				</div>
 			</div>
+			<script src="https://utteranc.es/client.js"
+        repo="butchtm/test-vitamin-template"
+        issue-term="pathname"
+        label="utterance-comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+			</script>
 		</>
 	)
 }
